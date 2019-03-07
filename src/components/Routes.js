@@ -4,6 +4,7 @@ import Public from "./Public";
 import LogIn from "./LogIn";
 import Admin from "./Admin";
 import Welcome from "./Welcome";
+import PrivateRoute from "./PrivateRoute";
 
 const Routes = () => (
     <div>
@@ -21,8 +22,8 @@ const Routes = () => (
         </ul>
         <Route path="/public" component={Public} />
         <Route path="/login" component={LogIn} />
-        <Route path="/protected/admin" component={Admin} />
-        <Route path="/protected/welcome" component={Welcome} />
+        <PrivateRoute path="/protected/admin" component={Admin} />
+        <PrivateRoute path="/protected/welcome" component={Welcome} />
     </div>
 );
 
