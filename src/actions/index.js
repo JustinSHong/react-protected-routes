@@ -24,6 +24,15 @@ export const logInUser = (user = dispatch => {
     try {
         dispatch({ type: LOG_IN_USER, payload: user });
     } catch {
-        dispatch({ type: LOGGING_OUT_USER });
+        dispatch({ type: LOG_IN_USER_ERROR });
+    }
+});
+
+export const logOutUser = (user = dispatch => {
+    dispatch({ type: LOGGING_OUT_USER });
+    try {
+        dispatch({ type: LOG_OUT_USER, payload: user });
+    } catch {
+        dispatch({ type: LOG_OUT_USER_ERROR });
     }
 });
