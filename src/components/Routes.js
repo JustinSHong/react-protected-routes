@@ -5,10 +5,12 @@ import LogIn from "./LogIn";
 import Admin from "./Admin";
 import Welcome from "./Welcome";
 import PrivateRoute from "./PrivateRoute";
+import AuthButton from "./AuthButton";
 
 const Routes = () => (
     <div>
         <h1>Routes here</h1>
+        <AuthButton />
         <ul>
             <li>
                 <Link to="/public">PUBLIC PAGE</Link>

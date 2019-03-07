@@ -16,10 +16,13 @@ class Login extends Component {
     };
 
     render() {
+        const { from } = this.props.location.state || {
+            from: { pathname: "/" }
+        };
         const { redirect } = this.state;
 
         if (redirect === true) {
-            return <Redirect to="/" />;
+            return <Redirect to={from} />;
         }
 
         return (
