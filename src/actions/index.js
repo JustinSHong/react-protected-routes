@@ -18,3 +18,12 @@ export const createUser = (user = dispatch => {
         dispatch({ type: CREATE_USER_ERROR });
     }
 });
+
+export const logInUser = (user = dispatch => {
+    dispatch({ type: LOGGING_IN_USER });
+    try {
+        dispatch({ type: LOG_IN_USER, payload: user });
+    } catch {
+        dispatch({ type: LOGGING_OUT_USER });
+    }
+});
