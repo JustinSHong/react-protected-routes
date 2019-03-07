@@ -1,12 +1,13 @@
 import React from "react";
 import { Link, Route } from "react-router-dom";
-import Public from "./components";
-import LogIn from "./components";
-import Admin from "./components";
-import Welcome from "./components";
+import Public from "./Public";
+import LogIn from "./LogIn";
+import Admin from "./Admin";
+import Welcome from "./Welcome";
 
 const Routes = () => (
     <div>
+        <h1>Routes here</h1>
         <ul>
             <li>
                 <Link to="/public">PUBLIC PAGE</Link>
