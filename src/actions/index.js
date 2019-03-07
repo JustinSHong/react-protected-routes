@@ -14,8 +14,8 @@ export const createUser = (user = dispatch => {
     dispatch({ type: CREATING_USER });
     try {
         dispatch({ type: CREATE_USER, payload: user });
-    } catch {
-        dispatch({ type: CREATE_USER_ERROR });
+    } catch (error) {
+        dispatch({ type: CREATE_USER_ERROR, payload: error });
     }
 });
 
@@ -24,7 +24,7 @@ export const logInUser = (user = dispatch => {
     try {
         dispatch({ type: LOG_IN_USER, payload: user });
     } catch {
-        dispatch({ type: LOG_IN_USER_ERROR });
+        dispatch({ type: LOG_IN_USER_ERROR, payload: error });
     }
 });
 
@@ -33,6 +33,6 @@ export const logOutUser = (user = dispatch => {
     try {
         dispatch({ type: LOG_OUT_USER, payload: user });
     } catch {
-        dispatch({ type: LOG_OUT_USER_ERROR });
+        dispatch({ type: LOG_OUT_USER_ERROR, payload: error });
     }
 });
